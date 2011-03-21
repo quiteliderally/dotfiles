@@ -1,1 +1,2 @@
-alias lsa='ls -A'
+alias ll='ls -lsA'
+alias lll='ls -lsA --color=always | less -r'
