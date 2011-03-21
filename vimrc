@@ -1,0 +1,58 @@
+" defaults
+:set tabstop=2
+:set shiftwidth=2
+:set expandtab
+:set autoindent
+:set pastetoggle=<F11>
+:set background=dark
+:set mouse=
+
+:syntax on
+
+:set autoindent
+:set smartindent
+:set showmatch
+
+set wildmode=longest:full
+set wildmenu
+
+:autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
+
+" set some custom tab spacings
+autocmd BufRead         *.xsl   set ts=2 sw=2 expandtab autoindent
+autocmd BufRead         *.php   set ts=4 sw=2 expandtab autoindent
+autocmd BufRead         *.tpl   set ts=4 sw=2 expandtab autoindent
+
+" Automatically chmod +x Shell and Perl scripts
+autocmd BufWritePost    *.sh    !chmod +x %
+autocmd BufWritePost    *.pl    !chmod +x %
+
+" read/write a .viminfo file, don't store more than 1000 lines of registers
+set viminfo='20,\"1000
+
+" don't show help when F1 is pressed
+map <F1> <ESC>
+"ignoremap <F1> <ESC>
+
+"Open file at last edited location
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") |
+                         \ exe "normal g'\"" | endif
+
+"---------+
+" Comments \
+"-----------+
+
+map ,# :s/^/#/<CR>
+map ,/ :s/^/\/\//<CR>
+map ,> :s/^/> /<CR>
+map ,! :s/^/!/<CR>
+map ,; :s/^/;/<CR>
+map ,- :s/^/--/<CR>
+map ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>
+
+" Common Command Typos
+command! Q  quit    " converts ... :Q  => :q
+command! W  write   " converts ... :W  => :w
+command! Wq wq      " converts ... :Wq => :wq
+command! Wn wn      " converts ... :Wn => :wn
+command! WN wN      " converts ... :WN => :wN
