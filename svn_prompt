@@ -1,7 +1,7 @@
 svn_ps1() {
       local s=
       if [[ -d ".svn" ]] ; then
-        s="(r:$(svn info |grep Revision: |cut -c11-)/HEAD:$(svn info -r HEAD |grep Revision: |cut -c11-))"
+        s="(r:$(svn info |grep Revision: |cut -c11-) - h:$(svn info -r HEAD |grep Revision: |cut -c11-))"
       fi
       echo -n "$s"
 }
