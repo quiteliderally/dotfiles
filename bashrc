@@ -20,6 +20,9 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+. ~/dotfiles/colors
+. ~/dotfiles/svn_prompt
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -40,4 +43,4 @@ if [ "$(ls ~/dotfiles/aliases)" ]; then
    for f in ~/dotfiles/aliases/*; do source $f; done
 fi
 
-PS1="\n\u@\h\n→"
+PS1="\n\u@${bldgrn}\h${txtwht} [\W] \$(svn_ps1)\n→"
