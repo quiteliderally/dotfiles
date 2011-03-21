@@ -1,0 +1,4 @@
+function dmp(){
+ cd "/var/www/`uname -n`.newmediagateway.com/htdocs/${1}"
+}
+
