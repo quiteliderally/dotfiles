@@ -43,4 +43,4 @@ if [ "$(ls ~/dotfiles/aliases)" ]; then
    for f in ~/dotfiles/aliases/*; do source $f; done
 fi
 
-PS1="\n\u@${bldgrn}\h${txtwht} [\W] \$(svn_ps1)\n→"
+PS1="\n\u@${bldgrn}\h${txtwht} [\W] \$(svn_ps1)${txtwht}\n→"
