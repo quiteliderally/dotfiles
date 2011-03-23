@@ -39,6 +39,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+if [ -f ~/.rvm/scripts/rvm ] ; then
+    . ~/.rvm/scripts/rvm
+fi
+
 if [ "$(ls ~/dotfiles/aliases)" ]; then
    for f in ~/dotfiles/aliases/*; do source $f; done
 fi
