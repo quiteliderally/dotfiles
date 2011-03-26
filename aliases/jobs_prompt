@@ -1,0 +1,8 @@
+jobs_prompt() {
+  local j=$(jobs)
+  if test -n "$j"; then
+    echo -e "${j}"
+    echo -e "\n"
+  fi
+  
+}
