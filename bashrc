@@ -8,6 +8,7 @@
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # ... or force ignoredups and ignorespace
 export HISTCONTROL=ignoreboth
+export HISTIGNORE="&:ls:[bf]g:exit"
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -25,12 +26,12 @@ shopt -s checkwinsize
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -45,4 +46,4 @@ if [ "$(ls ~/dotfiles/aliases)" ]; then
    for f in ~/dotfiles/aliases/*; do source $f; done
 fi
 
-PS1="\n\u@${bldgrn}\h${txtwht} [\W] \$(svn_ps1)${txtwht}\n→"
+PS1="\n\n\[${bldwht}\]\u@\[${bldgrn}\]\h\[${txtwht}\] \[${txtcyn}\]\d \T\n\[${txtblu}\][\w]\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\]→ \[${txtwht}\]"
