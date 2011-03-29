@@ -2,8 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
@@ -48,4 +46,4 @@ if [ "$(ls ~/dotfiles/aliases)" ]; then
    for f in ~/dotfiles/aliases/*; do source $f; done
 fi
 
-PS1="\n\n\[${bldwht}\]\u@\[${bldgrn}\]\h\[${txtwht}\] \[${txtcyn}\]\d \T\n\[${txtblu}\][\w]\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\]→ \[${txtrst}\]"
+PS1="\n\n\[${bldwht}\]\u@\[${bldgrn}\]\h\[${txtwht}\] \[${txtcyn}\]\d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${txtblu}\][\w]\n\[${bldwht}\]→ \[${txtwht}\]"
