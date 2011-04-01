@@ -46,4 +46,4 @@ if [ "$(ls ~/dotfiles/aliases)" ]; then
    for f in ~/dotfiles/aliases/*; do source $f; done
 fi
 
-PS1="\n\n\[${bldwht}\]\u@\[${bldgrn}\]\h\[${txtwht}\] \[${txtcyn}\]\d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${txtblu}\][\w]\n\[${bldwht}\]→ \[${txtwht}\]"
+PS1="\n\n\[${bldwht}\]\u@\[${bldgrn}\]\h\[${txtwht}\] \[${txtcyn}\]\d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${txtblu}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
