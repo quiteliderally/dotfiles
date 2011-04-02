@@ -1,0 +1,17 @@
+function dss(){
+	echo $(pwd) >> ~/.dstack
+}
+
+function dsl(){
+	cat -n ~/.dstack
+}
+
+function dsg(){
+	local s="${1}q;d"
+	cd $(sed $s ~/.dstack )  
+}
+
+function dsd(){
+	local s="${1}d"
+	sed -i $s ~/.dstack
+}
