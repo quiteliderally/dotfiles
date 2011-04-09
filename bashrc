@@ -19,6 +19,7 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+
 . ~/dotfiles/colors
 . ~/dotfiles/svn_prompt
 
