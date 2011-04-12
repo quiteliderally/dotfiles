@@ -1,0 +1,5 @@
+Host mailcenterdev
+	HostName mailcenterdev.distribion.com
+	User tima
+ServerAliveCountMax 3
+ServerAliveInterval 10
