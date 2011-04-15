@@ -4,7 +4,7 @@ set shiftwidth=2
 set pastetoggle=<F11>
 set background=dark
 set mouse=
-
+color xoria256
 syntax on
 
 set autoindent
@@ -13,6 +13,9 @@ set showmatch
 
 set wildmode=longest:full
 set wildmenu
+
+set wrap
+set linebreak
 
 :autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
 
