@@ -13,6 +13,8 @@ export TERM="xterm-256color"
  #append to the history file, don't overwrite it
 
 shopt -s histappend
+DOTFILES_PATH=~/.dotfiles
+
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 
@@ -21,8 +23,8 @@ shopt -s histappend
 shopt -s checkwinsize
 
 
-. ~/dotfiles/colors
-. ~/dotfiles/svn_prompt
+. $DOTFILES_PATH/colors
+. $DOTFILES_PATH/svn_prompt
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -44,8 +46,8 @@ if [ -f ~/.rvm/scripts/rvm ] ; then
     . ~/.rvm/scripts/rvm
 fi
 
-if [ "$(ls ~/dotfiles/aliases)" ]; then
-   for f in ~/dotfiles/aliases/*; do source $f; done
+if [ "$(ls $DOTFILES_PATH/aliases)" ]; then
+   for f in $DOTFILES_PATH/aliases/*; do source $f; done
 fi
 
 PS1="\n\n\[${bldwht}\]\u@\[${bldgrn}\]\h\[${txtwht}\] \[${txtcyn}\]\d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${txtblu}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
