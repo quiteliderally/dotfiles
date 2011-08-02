@@ -10,6 +10,7 @@ syntax on
 set autoindent
 set smartindent
 set showmatch
+set expandtab
 
 set wildmode=longest:full
 set wildmenu
