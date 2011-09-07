@@ -51,3 +51,5 @@ if [ "$(ls $DOTFILES_PATH/aliases)" ]; then
 fi
 
 PS1="\n\n\[${bldwht}\]\u@\[${bldgrn}\]\h\[${txtwht}\] \[${txtcyn}\]\d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${txtblu}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
