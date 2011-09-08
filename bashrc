@@ -50,6 +50,11 @@ if [ "$(ls $DOTFILES_PATH/aliases)" ]; then
    for f in $DOTFILES_PATH/aliases/*; do source $f; done
 fi
 
-PS1="\n\n\[${bldwht}\]\u@\[${bldgrn}\]\h\[${txtwht}\] \[${txtcyn}\]\d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${txtblu}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
+if [ -n "${SSH_CONNECTION}" ]; then
+  PS1="\n\n\[${bldred}\]\u\[${bldgrn}\]@\h\[${txtwht}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
+else
+  PS1="\n\n\[${bldwht}\]\u\[${bldgrn}\]@\h\[${txtwht}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
+fi
+
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
