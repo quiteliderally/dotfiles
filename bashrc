@@ -51,9 +51,9 @@ if [ "$(ls $DOTFILES_PATH/aliases)" ]; then
 fi
 
 if [ -n "${SSH_CONNECTION}" ]; then
-  PS1="\n\n\[${bldred}\]\u\[${bldgrn}\]@\h\[${txtwht}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
+  PS1="\n\n\[${bldred}\]\u\[${bldgrn}\]@\h\[${txtcyn}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
 else
-  PS1="\n\n\[${bldwht}\]\u\[${bldgrn}\]@\h\[${txtwht}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
+  PS1="\n\n\[${bldwht}\]\u\[${bldgrn}\]@\h\[${txtcyn}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
 fi
 
 
