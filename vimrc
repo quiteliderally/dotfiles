@@ -11,7 +11,7 @@ set autoindent
 set smartindent
 set showmatch
 set expandtab
-
+set nofoldenable 
 set wildmode=longest:full
 set wildmenu
 
