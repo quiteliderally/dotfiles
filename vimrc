@@ -32,8 +32,9 @@ call pathogen#helptags()
 
 colorscheme xoria256
 
-nnoremap <Leader>d :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
-nnoremap <Leader>D :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR>
+nmap <Leader>d :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
+nmap <Leader>D :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR>
+nmap <Leader>l :set list!<CR>
 
 filetype plugin on
 set ofu=syntaxcomplete#Complete
