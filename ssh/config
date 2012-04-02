@@ -1,8 +1,2 @@
-Host mailcenterdev
-	HostName mailcenterdev.distribion.com
-	User tima
-Host blindsonsale
-	HostName blindsonsale.com
-	user tim
 ServerAliveCountMax 3
 ServerAliveInterval 10
