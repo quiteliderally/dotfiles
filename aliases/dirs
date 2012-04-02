@@ -1,0 +1,3 @@
+alias pu='pushd'
+alias po='popd'
+alias _='dirs'
