@@ -4,7 +4,6 @@ set shiftwidth=2
 set pastetoggle=<F11>
 set background=dark
 set mouse=
-color xoria256
 syntax on
 
 set autoindent
@@ -30,6 +29,8 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") |
                          \ exe "normal g'\"" | endif
 call pathogen#infect()
 call pathogen#helptags()
+
+colorscheme xoria256
 
 nnoremap <Leader>d :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
 nnoremap <Leader>D :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR>
