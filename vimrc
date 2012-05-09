@@ -30,7 +30,7 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") |
 call pathogen#infect()
 call pathogen#helptags()
 
-colorscheme xoria256
+colorscheme Tomorrow-Night-Eighties
 
 nmap <Leader>d :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
 nmap <Leader>D :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR>

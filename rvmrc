@@ -1,0 +1,15 @@
+# Example ~/.rvmrc file.
+#
+# This file shows some examples of setting defaults to your own tastes.
+#
+# If you wish to adjust the default ruby interpreter/version/patchlevel
+# settings they can be found in the $rvm_path/config/db file.
+# Beware that currently that file is overwritten on install so
+# back it up if you change anything.
+#
+
+export rvm_install_on_use_flag=1
+
+export rvm_gemset_create_on_use_flag=1
+export rvm_make_flags="-j3"
+
