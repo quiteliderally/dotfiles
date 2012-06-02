@@ -50,13 +50,10 @@ if [ "$(ls $DOTFILES_PATH/aliases)" ]; then
    for f in $DOTFILES_PATH/aliases/*; do source $f; done
 fi
 
-if [ -n "${SSH_CONNECTION}" ]; then
-  PS1="\n\n\[${bldred}\]\u\[${bldgrn}\]@\h\[${txtcyn}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
-else
-  PS1="\n\n\[${bldwht}\]\u\[${bldgrn}\]@\h\[${txtcyn}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${bldwht}\][\w]\n\[${bldwht}\]→ \[${txtrst}\]"
-fi
+PS1="\n\n\[${txtwht}\]\u\[${txtgrn}\]@\h\[${txtcyn}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${txtrst}\][\w]\n→ \[${txtrst}\]"
 
 
 export CDPATH='.:~:~/projects'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+EDITOR=vim
