@@ -56,4 +56,4 @@ PS1="\n\n\[${txtwht}\]\u\[${txtgrn}\]@\h\[${txtcyn}\] \d \T\n\[${txtylw}\]\$(job
 export CDPATH='.:~:~/projects'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-EDITOR=vim
+export EDITOR=vim
