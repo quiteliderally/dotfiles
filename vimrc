@@ -13,6 +13,7 @@ set expandtab
 set nofoldenable 
 set wildmode=longest:full
 set wildmenu
+set tagrelative
 
 set wrap
 set linebreak
@@ -38,3 +39,4 @@ nmap <Leader>l :set list!<CR>
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+set tags=tags;/
