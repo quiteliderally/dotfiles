@@ -1,25 +1,11 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
-
-# don't put duplicate lines in the history. See bash(1) for more options
-# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
-# ... or force ignoredups and ignorespace
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="&:ls:[bf]g:exit"
 export TERM="xterm-256color"
- #append to the history file, don't overwrite it
 
 shopt -s histappend
 DOTFILES_PATH=~/.dotfiles
 
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 
