@@ -1,1 +1,2 @@
 alias grep='grep -P'
+alias grepc='grep -P --color=always'
