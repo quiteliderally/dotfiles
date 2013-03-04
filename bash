@@ -43,3 +43,6 @@ export CDPATH='.:~:~/projects'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export EDITOR=vim
+
+export PATH="${PATH}$(find ~/software/bin -iname 'bin' -type d -printf ':%p')"
+export CLASSPATH="${CLASSPATH}$(find ~/software/classpath -iname '*.jar' -printf ':%h\n'  | uniq | tr -d '\n')"
