@@ -38,3 +38,6 @@
 [submodule "vim/bundle/vim-sensible"]
 	path = vim/bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
+[submodule "vim/bundle/tomorrow-theme-vim"]
+	path = vim/bundle/tomorrow-theme-vim
+	url = https://github.com/d11wtq/tomorrow-theme-vim.git

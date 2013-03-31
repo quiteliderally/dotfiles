@@ -15,6 +15,12 @@ set tagrelative
 set wrap
 set linebreak
 
+set number
+
+set ttyfast
+set lazyredraw
+
+set t_ut=
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent 
 
 "Open file at last edited location
