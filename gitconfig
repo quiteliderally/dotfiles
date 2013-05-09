@@ -30,3 +30,5 @@
 [user]
 	name = Tim Ariyeh
 	email = tim.ariyeh@gmail.com
+[core]
+	autocrlf = input

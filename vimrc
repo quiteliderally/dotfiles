@@ -36,4 +36,4 @@ nmap <Leader>l :set list!<CR>
 
 filetype plugin on
 autocmd FileType mail set spell spelllang=en fo+=aw
-
+set undodir^=~/.vim/undo
