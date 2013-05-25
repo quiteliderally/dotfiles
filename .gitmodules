@@ -41,3 +41,6 @@
 [submodule "vim/bundle/tomorrow-theme-vim"]
 	path = vim/bundle/tomorrow-theme-vim
 	url = https://github.com/d11wtq/tomorrow-theme-vim.git
+[submodule "vim/bundle/vim-golang"]
+	path = vim/bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang
