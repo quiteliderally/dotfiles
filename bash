@@ -7,8 +7,6 @@ shopt -s histappend
 DOTFILES_PATH=~/.dotfiles
 
 shopt -s checkwinsize
-set -o vi
-
 
 . $DOTFILES_PATH/colors
 . $DOTFILES_PATH/svn_prompt
@@ -40,7 +38,7 @@ fi
 PS1="\n\n\[${txtwht}\]\u\[${txtgrn}\]@\h\[${txtcyn}\] \d \T\n\[${txtylw}\]\$(jobs_prompt)\n\[${txtrst}\][\w]\n→ \[${txtrst}\]"
 
 
-export CDPATH='.:~:~/projects'
+export CDPATH='.:~:~/projects:/srv/www'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export EDITOR=vim
