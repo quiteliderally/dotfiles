@@ -15,7 +15,9 @@ set tagrelative
 set wrap
 set linebreak
 
-set number
+set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
 
 set ttyfast
 set lazyredraw
@@ -26,14 +28,17 @@ autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 
 "Open file at last edited location
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") |
                          \ exe "normal g'\"" | endif
-call pathogen#infect()
-call pathogen#helptags()
 
 colorscheme xoria256
 nmap <Leader>d :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
 nmap <Leader>D :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR>
 nmap <Leader>l :set list!<CR>
 
-filetype plugin on
 autocmd FileType mail set spell spelllang=en fo+=aw
 set undodir^=~/.vim/undo
+
+filetype plugin indent on
+syntax on
+
+call pathogen#infect()
+call pathogen#helptags()
